@@ -1,0 +1,29 @@
+<h1>Books List</h1>
+
+<!-- 🔥 ADD BOOK FORM -->
+<h2>Add Book</h2>
+
+<input [value]="newBook.title" (input)="newBook.title = $event.target.value" placeholder="Title" />
+<br><br>
+
+<input [value]="newBook.author" (input)="newBook.author = $event.target.value" placeholder="Author" />
+<br><br>
+
+<button (click)="addBook()">Add Book</button>
+
+<hr>
+
+<!-- 🔥 BOOK LIST -->
+<ul>
+  <li *ngFor="let book of books" (click)="showBook(book)">
+    {{ book.title }} - {{ book.author }}
+  </li>
+</ul>
+
+<!-- 🔥 BOOK DETAILS -->
+<div *ngIf="selectedBook" class="details">
+  <h2>Book Details</h2>
+  <p><strong>Title:</strong> {{ selectedBook.title }}</p>
+  <p><strong>Author:</strong> {{ selectedBook.author }}</p>
+  <p><strong>Status:</strong> Available</p>
+</div>
