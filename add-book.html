@@ -1,0 +1,17 @@
+<div class="add-book-container">
+  <h2>📚 Add New Book</h2>
+  
+  <div class="form-group">
+    <label>Book Title:</label>
+    <input [(ngModel)]="title" placeholder="Enter book title" class="form-control">
+  </div>
+  
+  <div class="form-group">
+    <label>Author Name:</label>
+    <input [(ngModel)]="author" placeholder="Enter author name" class="form-control">
+  </div>
+  
+  <button (click)="addBook()" class="btn-add">➕ Add Book</button>
+  
+  <p class="success-message" *ngIf="title === '' && author === ''"></p>
+</div>
