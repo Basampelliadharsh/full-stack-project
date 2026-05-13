@@ -1,0 +1,37 @@
+<p>admin-panel works!</p>
+<!-- admin-panel.html -->
+<div class="admin-container">
+
+  <h1>Admin Panel</h1>
+  <p>Manage Library Records</p>
+
+  <div class="stats">
+
+    <div class="card">
+      <h2>{{ totalBooks }}</h2>
+      <span>Total Books</span>
+    </div>
+
+    <div class="card">
+      <h2>{{ issuedBooks }}</h2>
+      <span>Issued Books</span>
+    </div>
+
+    <div class="card">
+      <h2>{{ students }}</h2>
+      <span>Students</span>
+    </div>
+
+  </div>
+
+  <div class="recent-section">
+    <h2>Recent Books</h2>
+
+    <ul>
+      <li *ngFor="let book of recentBooks">
+        {{ book }}
+      </li>
+    </ul>
+  </div>
+
+</div>
